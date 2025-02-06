@@ -1,0 +1,93 @@
+# Horse System Configuration
+
+# Follow Settings
+follow:
+  # Maximum distance for horse to follow owner (blocks)
+  max-distance: 20
+  # Follow speed (blocks/second)
+  follow-speed: 1.2
+  # Minimum follow distance (blocks)
+  min-distance: 2
+
+# GUI Settings
+gui:
+  title: "&8» &6Horse Menu"
+  size: 54 # 6 rows
+  summon-button: "&aSummon Horse"
+  dismiss-button: "&cDismiss Horse"
+  cooldown-active: "&cCooldown: %time%"
+
+# Storage Settings
+storage:
+  type: yml # yml or mysql
+  mysql:
+    host: localhost
+    port: 3306
+    database: horsesystem
+    username: root
+    password: ''
+    table-prefix: hs_
+
+# Hologram Settings
+hologram:
+  enabled: true
+  format: "&6%player%'s Horse"
+
+# Cooldown Settings
+cooldown:
+  death: 1800 # 30 minutes (in seconds)
+  message: "&cYour horse has died! You must wait %time% to summon it again."
+
+# Messages
+messages:
+  prefix: "&8[&6HorseSystem&8] &7"
+  horse-given: "%prefix%&aHorse has been given to %player%!"
+  no-permission: "&cYou don't have permission to use this command!"
+  player-not-found: "%prefix%&cPlayer not found!"
+  invalid-horse-type: "%prefix%&cInvalid horse type!"
+  invalid-color: "%prefix%&cInvalid horse color!"
+  invalid-number: "%prefix%&cInvalid number value!"
+  config-reloaded: "%prefix%&aConfiguration file has been reloaded!"
+  reload-start: "%prefix%&eReloading plugin..."
+  horse-summoned: "&aYour horse has been summoned!"
+  horse-dismissed: "&7Your horse has been dismissed!"
+  horse-on-cooldown: "&cYour horse is on cooldown for %time%!"
+  dismiss-active-horse: "&cPlease dismiss your active horse first!"
+  cant-damage-horse: "&cYou can't damage other players' horses!"
+  cant-ride-horse: "&cYou can't ride other players' horses!"
+  all-horses-dismissed: "&7All your horses have been dismissed!"
+  no-active-horses: "&cYou don't have any active horses!"
+  horse-paper-created: "&aHorse has been converted to paper successfully!"
+  horse-paper-inventory-full: "&cYour inventory is full!"
+  horse-paper-invalid-slot: "&cInvalid slot number!"
+  horse-paper-no-horses: "&cYou don't have any horses!"
+  horse-paper-corrupted: "&cHorse data is corrupted!"
+  horse-paper-inventory-only: "&cYou can only keep horse papers in your inventory!"
+
+# Horse Types and Properties
+horse-types:
+  normal:
+    display-name: "&eNormal Horse"
+    max-speed: 2.0
+    max-health: 30.0
+    max-jump: 2.0
+  zombie:
+    display-name: "&2Zombie Horse"
+    max-speed: 1.8
+    max-health: 25.0
+    max-jump: 1.8
+  skeleton:
+    display-name: "&7Skeleton Horse"
+    max-speed: 1.9
+    max-health: 28.0
+    max-jump: 1.9
+  donkey:
+    display-name: "&6Donkey"
+    max-speed: 1.6
+    max-health: 20.0
+    max-jump: 1.5
+  mule:
+    display-name: "&eMule"
+    max-speed: 1.7
+    max-health: 22.0
+    max-jump: 1.6 
